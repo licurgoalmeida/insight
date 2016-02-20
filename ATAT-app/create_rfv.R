@@ -1,4 +1,5 @@
-# Create rfv  list
+# This script is used to create a list with reasons for visit.
+# This list is loaded by ui.R and server.R
 setwd("~/Dropbox/Insight/Project/ATAT-app/")
 rfv$V2 = paste(rfv$V2,rfv$V3,rfv$V4,"")
 rfv = rfv[,c("V1","V2")]

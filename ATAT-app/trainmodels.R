@@ -47,6 +47,14 @@ fitrf = train(y = trainy, # Select training feature
                 trControl = ctrl) # Define pre-process parameters
 
 ctrl = trainControl(method = "repeatedcv",repeats = 1) # Define training method
+fitlas = train(y = trainy, # Select training feature
+              x = training, # Select database
+              method = "lasso", # Select training method
+              preProc = c("center", "scale"),
+              trControl = ctrl,
+              tuneLength = 1) # Define pre-process parameters
+
+ctrl = trainControl(method = "repeatedcv",repeats = 1) # Define training method
 fitlm = train(y = trainy, # Select training feature
               x = training, # Select database
               method = "lm", # Select training method

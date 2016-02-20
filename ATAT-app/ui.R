@@ -1,6 +1,9 @@
+# ui.R creates the app's interface, placing buttons and text boxes.
+# Licurgo de Almeida (licurgoalmeida@gmail.com)
+# 01/25/2016
 library(shiny)
 library(formattable)
-load("Data/lrfv.Rdata")
+load("Data/lrfv.Rdata") # Load reason for visit table
 shinyUI(fluidPage(
   # Some custom CSS
   tags$head(
@@ -25,7 +28,7 @@ shinyUI(fluidPage(
                     color: white;
                     }
                     body {
-                    background-color: #1a8cff;
+                    background-color: white;
                     }
                     
                     .option-group {
@@ -33,7 +36,7 @@ shinyUI(fluidPage(
                     border-radius: 6px;
                     padding: 4px 5px;
                     margin: 5px -10px;
-                    background-color: white;
+                    background-color: #f5f5f5;
                     }
 
                     p {
@@ -42,7 +45,9 @@ shinyUI(fluidPage(
                     }
                     
                     h1 {
-                    color: white;
+                    color: blue;
+                    margin: 0px -1px;
+                    padding: 0px -1px;
                     }
                     .option-header {
                     color: #1a8cff;
@@ -52,10 +57,11 @@ shinyUI(fluidPage(
                     }
                     "))
     ),
-  titlePanel(title = HTML("<h1><font size=\"20\">A</font><font size=\"6\">utomated</font>
-                          <font size=\"20\">T</font><font size=\"6\">riage</font>
-                          <font size=\"20\">A</font><font size=\"6\">ssignment</font>
-                          <font size=\"20\">T</font><font size=\"6\">ool</font></h1>"),
+  titlePanel(title = HTML("<a href=\"https://docs.google.com/presentation/d/1D0b5w0qja8fQ2EQDL2pGoqpxRR5IU24X5dpIxTyq-38/pub?start=false&loop=false&delayms=3000\">
+                          <h1><font size=\"10\">A</font><font size=\"4\">utomated</font>
+                          <font size=\"10\">T</font><font size=\"4\">riage</font>
+                          <font size=\"10\">A</font><font size=\"4\">ssignment</font>
+                          <font size=\"10\">T</font><font size=\"4\">ool</font></h1></a>"),
              windowTitle = "ATAT"),
   fluidRow(
     column(3,div(class = "option-group",div(class = "option-header", "Demo use only"),
